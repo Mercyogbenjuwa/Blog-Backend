@@ -6,7 +6,7 @@ const app = express();
 const routes = require('./src/Routes/routes');
 app.use(bodyParser.json());
 app.use(cors());
-app.use('/api', routes);
+app.use(routes);
 
 app.listen(PORT, () => {
   console.log(`server started on port ${PORT}`);
